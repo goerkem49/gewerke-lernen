@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gewerke lernen</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 30 32 10l24 20v26H8z' fill='%23e8890c'/%3E%3Crect x='26' y='38' width='12' height='18' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./lib/three/three.module.min.js",
+      "three/addons/": "./lib/three/addons/"
+    }
+  }
+  </script>
+  <script>
+    // Theme vor dem ersten Zeichnen setzen, damit nichts aufblitzt
+    try {
+      var s = JSON.parse(localStorage.getItem('gewerke-lernen-v1') || '{}');
+      if (s.theme === 'hell') document.documentElement.dataset.theme = 'light';
+      if (s.theme === 'dunkel') document.documentElement.dataset.theme = 'dark';
+    } catch (e) {}
+  </script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <noscript>Diese Seite braucht JavaScript.</noscript>
+</body>
+</html>
